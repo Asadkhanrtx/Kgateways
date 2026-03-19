@@ -36,5 +36,5 @@ spec:
   selector:
     app: ey-cart-app
   ports:
-  - port: 3000
+  - port: 3003
     targetPort: 3000
