@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flipkart-clone-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flipkart-clone-app
+    template:
+      metadata:
+        labels:
+          app: flipkart-clone-app
+      spec:
+        containers:
+        - name: flipkart-clone-app
+          image: muralisocial123/flipkart-clone-kuberox:v1.1.0
+          ports:
+          - containerport: 80
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "500m"
+              memory: "256Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flipkart-clone-app
+spec:
+  type: ClusterIP
+  selector:
+    app: flipkart-clone-app
+  ports:
+  - port: 80
+    targetPort: 80
