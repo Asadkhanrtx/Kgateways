@@ -32,7 +32,7 @@ kind: Service
 metadata:
   name: transaction-app-service
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: transaction-app
   ports:
