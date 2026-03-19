@@ -30,11 +30,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: fitness-app-service
+  name: flower-app-service
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
-    app: fitness-app
+    app: flower-app
   ports:
   - port: 3015
     targetPort: 3015
