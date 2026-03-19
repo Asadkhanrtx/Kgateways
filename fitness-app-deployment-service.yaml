@@ -32,7 +32,7 @@ kind: Service
 metadata:
   name: fitness-app-service
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: fitness-app
   ports:
