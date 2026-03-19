@@ -12,12 +12,6 @@ spec:
       - path:
           type: PathPrefix
           value: /
-      filters:
-        - type: URIRewrite
-          uriRewrite:
-            path:
-              type: ReplacePrefixMatch
-              replacePrefixMatch: /
       backendRefs:
         - name: ey-cart-app-service
           port: 3000
