@@ -13,8 +13,8 @@ spec:
           type: PathPrefix
           value: /fitness
       filters:
-        - type: URIRewrite
-          uriRewrite:
+        - type: URLRewrite
+          urlRewrite:
             path:
               type: ReplacePrefixMatch
               replacePrefixMatch: /
